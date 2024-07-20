@@ -112,11 +112,11 @@ sudo docker build  -f Dockerfile.python -t mezhibo_docker .
 4) Остановите проект. В качестве ответа приложите скриншот sql-запроса.
 
 
-**Решение 4**
+**Решение 3**
 
 
 создаем файлик compose.yml
-
+```
 'version: '3.8'
 services:
 
@@ -194,7 +194,7 @@ networks:            # создание сети
 volumes:
   mysql_data: {}'
 
-
+```
 
 
 
