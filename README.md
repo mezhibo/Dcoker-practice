@@ -196,5 +196,21 @@ volumes:
 
 ```
 
+Теперь делаем docker compose up -d
+
+Видим что у нас пошла сборка 
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/9bd5cac42a4b63dbe12e52076a485f95f7df1431/IMG/12.jpg)
+
+
+Сборка удачная, теперь посмотрим работают ли контейнеры, видим что все хорошо
+
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/9bd5cac42a4b63dbe12e52076a485f95f7df1431/IMG/13.jpg)
+
+
+
+
+
 
 
