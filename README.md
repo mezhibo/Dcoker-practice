@@ -209,6 +209,29 @@ volumes:
 ![alt text](https://github.com/mezhibo/Dcoker-practice/blob/9bd5cac42a4b63dbe12e52076a485f95f7df1431/IMG/13.jpg)
 
 
+Теперь подергаем через curl наш ingress proxy
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/169e8c4fdf3b030615c53ed0f8b565f1ace12abc/IMG/14.jpg)
+
+
+Дальше провалимся в наш контейнер с базой данных, посмотрим список баз, и выберем нашу дефолтную example, в котору по идее должны были записываться запросы, ну сейчас и проверим
+
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/169e8c4fdf3b030615c53ed0f8b565f1ace12abc/IMG/15.jpg)
+
+
+Выбираем базу, таблицу и видим все наши запросы через curl 
+
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/169e8c4fdf3b030615c53ed0f8b565f1ace12abc/IMG/16.jpg)
+
+
+Теперь сохраняем все изменения и пушим их в форкнутую к  себе репозиторию, для выолнения следующего задания.
+
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/169e8c4fdf3b030615c53ed0f8b565f1ace12abc/IMG/17.jpg)
+
+
 
 
 
