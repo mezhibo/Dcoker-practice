@@ -234,6 +234,66 @@ volumes:
 
 
 
+**Задача 4**
+
+1) Запустите в Yandex Cloud ВМ (вам хватит 2 Гб Ram).
+
+2) Подключитесь к Вм по ssh и установите docker.
+
+3) Напишите bash-скрипт, который скачает ваш fork-репозиторий в каталог /opt и запустит проект целиком.
+
+4) Зайдите на сайт проверки http подключений, например(или аналогичный): https://check-host.net/check-http и запустите проверку вашего сервиса http://<внешний_IP-адрес_вашей_ВМ>:8090. Таким образом трафик будет направлен в ingress-proxy.
+
+5) (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения docker ps -a
+
+6) В качестве ответа повторите sql-запрос и приложите скриншот с данного сервера, bash-скрипт и ссылку на fork-репозиторий.
+
+
+
+**Решение 4**
+
+
+Создадим машинку
+
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/57cfbdda3f54d28f3a004bff1e6e2ad847ae616f/IMG/18.jpg)
+
+
+Напишем незатейливый скриптец для скачивания моей репы с правильными данными для выполнения компоса, и дальнейшего компоса, и сразу запустим его
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/57cfbdda3f54d28f3a004bff1e6e2ad847ae616f/IMG/19.jpg)
+
+
+
+Видим что все запустилось успешно 
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/57cfbdda3f54d28f3a004bff1e6e2ad847ae616f/IMG/20.jpg)
+
+
+И теперь идем на портал https://check-host.net/check-http чтобы проверить как наше приложение принмает коннекты
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/57cfbdda3f54d28f3a004bff1e6e2ad847ae616f/IMG/21.jpg)
+
+
+
+Делаем массоый запрос на наш сервер
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/0fffd79b0b1d9b7a8601b7e1c435246fd14d19fc/IMG/22.jpg)
+
+
+Возвращаемся в наш контенйер с нашей базой, и смотрим активность
+
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/0fffd79b0b1d9b7a8601b7e1c435246fd14d19fc/IMG/23.jpg)
+
+
+
+Видим что производились запросы к нашему веб серверу из глобальной сети 
+
+
+
+
+
 
 
 
