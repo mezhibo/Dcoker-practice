@@ -291,6 +291,62 @@ volumes:
 Видим что производились запросы к нашему веб серверу из глобальной сети 
 
 
+Вот незатейливый скриптец 
+
+'''
+#!/bin/bash
+echo "Cloning the project from GitHub"
+  git clone https://github.com/mezhibo/shvirtd-example-python.git
+echo "Done"
+
+echo "Entering the project directory"
+  cd shvirtd-example-python
+echo "Done"
+
+echo "Creating docker containers: db, app, proxy and nginx"
+  sudo docker compose up -d
+echo "Done"
+
+echo "List of containers"
+  sudo docker ps
+
+
+
+'''
+
+
+[А вот ссылка на форкнутую, но уже верно отредактированную репу](https://github.com/mezhibo/shvirtd-example-python.git)
+
+
+
+**Задача 5 (*)**
+
+Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа schnitzler/mysqldump при помощи docker run ... команды. Подсказка: "документация образа."
+
+Протестируйте ручной запуск
+
+Настройте выполнение скрипта раз в 1 минуту через cron, crontab или systemctl timer. Придумайте способ не светить логин/пароль в git!!
+
+Предоставьте скрипт, cron-task и скриншот с несколькими резервными копиями в "/opt/backup"
+
+Задание необязательное, пропустим
+
+
+
+**Задача 6 (*) **
+
+Скачайте docker образ hashicorp/terraform:latest и скопируйте бинарный файл /bin/terraform на свою локальную машину, используя dive и docker save. Предоставьте скриншоты действий .
+
+**Задача 6.1**
+
+Добейтесь аналогичного результата, используя docker cp.
+
+Предоставьте скриншоты действий .
+
+
+**Решение 6**
+
+
 
 
 
