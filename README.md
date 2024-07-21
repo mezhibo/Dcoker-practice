@@ -352,13 +352,13 @@ echo "List of containers"
 ![alt text](https://github.com/mezhibo/Dcoker-practice/blob/7e3f2abc8edf4ef8dac477e93f920a6d801d1fd6/IMG/24.jpg)
 
 
-Устанавливаем Dive и вот этой командой '''docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest hashicorp/terraform''' просматриваем слои контенйера через Dive
+Устанавливаем Dive и вот этой командой docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest hashicorp/terraform просматриваем слои контенйера через Dive
 
 теперь ищем нужный нам слой, где появляется файлик .terraform бинарник
 
 ![alt text](https://github.com/mezhibo/Dcoker-practice/blob/7e3f2abc8edf4ef8dac477e93f920a6d801d1fd6/IMG/25.jpg)
 
-Далее командой '''docker save hashicorp/terraform -o image.tar''' извлекаем к себе на машину все слои образа
+Далее командой docker save hashicorp/terraform -o image.tar извлекаем к себе на машину все слои образа
 
 И через tar разархивируем данные из нужного нам слоя
 
@@ -366,6 +366,18 @@ echo "List of containers"
 
 
 
+**Решение 6.1**
+
+Либо же можно скопировать фаил не выискивая его из слоев, а просто зная где он лежит внутри контейнера, и выгрузить его на локальную машину
+
+Создадим контейнер из снимка, без его запуска
+
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/575fc80dbab8a5bbc73ccd7f53c4f35d7375f5c5/IMG/27.jpg)
+
+И теперь скопируем из него в корневую папку наш заветный бинарник Терраформ
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/575fc80dbab8a5bbc73ccd7f53c4f35d7375f5c5/IMG/28.jpg)
 
 
 
