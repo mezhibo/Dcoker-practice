@@ -1,4 +1,5 @@
 **Задача 0**
+
 Убедитесь что у вас НЕ(!) установлен docker-compose, для этого получите следующую ошибку от команды docker-compose --version
 Command 'docker-compose' not found, but can be installed with:
 
