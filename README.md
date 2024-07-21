@@ -316,7 +316,7 @@ echo "List of containers"
 '''
 
 
-[А вот ссылка на форкнутую, но уже верно отредактированную репу](https://github.com/mezhibo/shvirtd-example-python.git)
+[А вот ссылка на форкнутую, на уже верно отредактированную репу](https://github.com/mezhibo/shvirtd-example-python.git)
 
 
 
@@ -346,6 +346,25 @@ echo "List of containers"
 
 
 **Решение 6**
+
+пулим к себе образ hashicorp/terraform
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/7e3f2abc8edf4ef8dac477e93f920a6d801d1fd6/IMG/24.jpg)
+
+
+Устанавливаем Dive и вот этой командой '''docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest hashicorp/terraform''' просматриваем слои контенйера через Dive
+
+теперь ищем нужный нам слой, где появляется файлик .terraform бинарник
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/7e3f2abc8edf4ef8dac477e93f920a6d801d1fd6/IMG/25.jpg)
+
+Далее командой '''docker save hashicorp/terraform -o image.tar''' извлекаем к себе на машину все слои образа
+
+И через tar разархивируем данные из нужного нам слоя
+
+![alt text](https://github.com/mezhibo/Dcoker-practice/blob/7e3f2abc8edf4ef8dac477e93f920a6d801d1fd6/IMG/26.jpg)
+
+
 
 
 
