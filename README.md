@@ -267,7 +267,7 @@ volumes:
 ```
 #!/bin/bash
 echo "Cloning the project from GitHub"
-  git clone https://github.com/SlavaZakariev/shvirtd-example-python
+  git clone https://github.com/mezhibo/shvirtd-example-python.git
 echo "Done"
 
 echo "Entering the project directory"
