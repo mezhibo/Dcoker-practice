@@ -264,7 +264,23 @@ volumes:
 
 ![alt text](https://github.com/mezhibo/Dcoker-practice/blob/57cfbdda3f54d28f3a004bff1e6e2ad847ae616f/IMG/19.jpg)
 
+```
+#!/bin/bash
+echo "Cloning the project from GitHub"
+  git clone https://github.com/SlavaZakariev/shvirtd-example-python
+echo "Done"
 
+echo "Entering the project directory"
+  cd shvirtd-example-python
+echo "Done"
+
+echo "Creating docker containers: db, app, proxy and nginx"
+  sudo docker compose up -d
+echo "Done"
+
+echo "List of containers"
+  sudo docker ps
+```
 
 Видим что все запустилось успешно 
 
